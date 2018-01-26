@@ -32,6 +32,11 @@ It could be done for multiple classes.
 
 Specifics: This repo is based on Inception V3, that has 250 layers,  and use *sigmoid* as loss function (that give us probability of presence for each class)
 
+***Requirements***
+* python version > 3.5
+* pil 
+* tensorflow
+
 
 This way when you compute `dir tf_files/dataset` from
 windows prompt (`ls tf_files/dataset` when working with Unix) you
@@ -63,8 +68,12 @@ It's rather easy from now on.
 **Before starting**
 
 * Convert the .png format into .jpg with file_conversion.py
-* Delete the .png pics with the notebook PNG_Remover
+* Delete the .png pics with the notebook PNG_Remover, and check that all .png files have been deleted.
 * Create a small test_set 
+(**Mac User** OSX automatically create '.DS_Store' files, that could may cause troubles. To avoid that situation you have to delete them (every time you create a file) in two methods:
+
+1. sudo find / -name ".DS_Store" -depth -exec rm {} \; (putting root in the desired folder)
+2. using a script --> work in progress ^.^
 
 **Training:**
 
@@ -112,7 +121,7 @@ In the terminal
 
 `python -m scripts.label_image 
 --graph=tf_files/retrained_graph.pb 
---image=tf_files/dataset/Car/trial.jpg`
+--image=tf_files/dataset/class_1_subfoder/class_1_image.jpg`
 
 * If you want to test a folder with many pics
 In the terminal
@@ -120,6 +129,6 @@ In the terminal
 `python -m scripts.label_image
 --graph=tf_files/retrained_graph.pb
 --multiple_images=True
---testing_directory=tf_files/testing_dataset
+--testing_directory=tf_files/testing/
 `
 
