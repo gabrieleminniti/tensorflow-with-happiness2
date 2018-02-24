@@ -23,19 +23,21 @@ First: install TensorFlow for python3 [windows](https://www.tensorflow.org/insta
         a) `tf_files/`
         b) `scripts/`
         c) **file_convertion.py**
-        d)Documentatu
+        d)Readme.md
         
 1) Put the images divided into subfolders in the directory `tf_files/dataset/`
 *Be Careful* the label's name will be the same as the subufolders that contained into the direcory `dataset/`
 
-2) The model works with **jpg** images, if yours are not into desired format you should convert by running **file_convertion.py**. Be careful to change the name of the directories where are situated the pics inside the scripts  file_convertion.py.
+N.B. If you wanto to use part of data to testing, let's take them and put into `tf_files/testing/test`, to use after retrain.
 
-    `python file_conversion.py (--dir) (--input_format=png) (--output_format=jpg)`
+2) The model works with **jpg** images, if yours are not into desired format you should convert by running **file_convertion.py**.
+
+    `python file_conversion.py --dir=my/path/to/images --input_format=png) --output_format=jpg`
     
     Automatically the script convert all images inside the subfolder specified into *dir* option.
     If you need to convert a single folder easily is necessary to add the argoument *one_folder* = True
     
-     `python file_conversion.py --dir=my/path/ --input_format=png --output_format=jpg --one_folder=True`
+     `python file_conversion.py --dir=my/path/to/images --input_format=png --output_format=jpg --one_folder=True`
     
 
 3) Check inside the folder `tf_files/` you should have the following direcotries:
@@ -89,9 +91,14 @@ First: install TensorFlow for python3 [windows](https://www.tensorflow.org/insta
         --multiple_images=True
         --testing_directory=tf_files/testing/test_set/` > final_results.txt
         
+        
+        
 At the end you will have all the prevision saved inside final_results.txt
         
 
+
+Have fun! 
+Alè duri! 
 
 
 
