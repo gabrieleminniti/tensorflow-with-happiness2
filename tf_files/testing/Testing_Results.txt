@@ -1,0 +1,7 @@
+If you want to see the perfomances of your model it's easy to do:
+
+1) BEFORE RETRAIN, take a small part of the data (depends of the number of samples that you have)
+2) You could compute a robust accuracy with the TF splitting data during retrain:
+		80% data --> train  	|		10 % data --> validation		| 10 % data --> test
+
+3) After retrain, you could do prediction and test the goodness of the model

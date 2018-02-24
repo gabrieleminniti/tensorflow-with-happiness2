@@ -1,0 +1,14 @@
+Because of huge size of inception V3, is not possible to put on git.
+
+1) So you have to download at the following link:
+
+http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz
+
+2) move the .tgz file inside this folder
+
+3) Extract and don't touch anymore! 
+
+4) Have fun! 
+
+
+
